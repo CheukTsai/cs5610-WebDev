@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        @media(min-width:600px) {
+            .square {
+                border: purple 5px solid;
+            }
+        }
+
+        .whole-box {
+            margin-top: 10vw;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-box {
+            width: 60%;
+            text-align: center;
+        }
+
+        .square-parent {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .square {
+            width: 20vw;
+            height: 20vw;
+            background-color: red;
+            margin: 20px;
+        }
+
+        .square:hover {
+            background-color: green;
+        }
+    </style>
+    <title>Squares - Zhuocai Li</title>
+</head>
+
+<body>
+    <div>
+        <div class="whole-box">
+            <div class="text-box">
+                <h1>These are 4 squares created by Zhuocai Li</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni dignissimos molestias sunt cumque
+                    quas quis iusto rerum labore debitis facere, adipisci sapiente magnam exercitationem deserunt
+                    architecto quasi? Laboriosam, nostrum!</p>
+            </div>
+            <div class="square-parent">
+                <div class="square"></div>
+                <div class="square"></div>
+                <div class="square"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

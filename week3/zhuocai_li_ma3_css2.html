@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .grid-container {
+            height: 100vh;
+            display: grid;
+            grid-template-areas:
+                "box-header box-header box-header"
+                "box-side-l box-middle box-side-r"
+                "box-footer box-footer box-footer"
+            ;
+
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 1fr 4fr 1fr;
+            grid-gap: 4px;
+        }
+
+        .box {
+            background-color: aquamarine;
+            border: 1px solid;
+        }
+
+        .box-header {
+            height: 100%;
+            grid-area: box-header;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-middle {
+            height: 100%;
+            grid-area: box-middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box-hover {
+            height: 60px;
+            width: 60px;
+            background-color: purple;
+            transition: 0.5s ease-in-out;
+        }
+
+        .box-hover:hover {
+            height: 120px;
+            width: 120px;
+            background-color: brown;
+        }
+
+        .box-side-l {
+            grid-area: box-side-l;
+        }
+
+        .box-side-r {
+            background-color: #111;
+            grid-area: box-side-r;
+        }
+
+        .box-footer {
+            grid-area: box-footer;
+        }
+
+        .ul-container {
+            margin-top: 10px;
+        }
+    </style>
+    <title>CSS2 Zhuocai Li</title>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box box-middle">
+            <div class="box-hover">
+            </div>
+        </div>
+        <div class="box box-header">
+            <h1>Zhuocai Li's Website</h1>
+        </div>
+        <div class="box box-side-l">
+            <div class="ul-container">
+                <ul>
+                    <li><a href="#">Home Page</a></li>
+                    <li><a href="#">Photos</a></li>
+                    <li><a href="#">Secret Project</a></li>
+                    <li><a href="#abc">abc</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="box box-side-r">
+        </div>
+        <div class="box box-footer">
+        </div>
+    </div>
+</body>
+
+</html>

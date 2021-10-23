@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <my-box></my-box>
+</body>
+
+<script>
+    const boxTemplate = document.createElement('custom-box');
+    boxTemplate.innerHTML = `
+            <style>
+                div {
+                    height: 100px;
+                    width: 100px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 10px;
+                }
+                p{
+                	font-size: 50px;
+                  font-weight: bolder;
+                  color = black;
+                }
+            </style>
+            <h3>EC Created by Zhuocai Li</h3>
+            <h5>Click button to generate a box with random color and number (1-6) </h5>
+            <button>Click here</button>
+            <div><p></p></div>
+            `;
+
+    class MyBox extends HTMLElement {
+        constructor() {
+            super();
+            this.attachShadow({ mode: 'open' })
+            this.shadowRoot.appendChild(boxTemplate.cloneNode(true));
+        }
+
+        toggleColor() {
+            let colorArr = ['green', 'blue', 'red'];
+            let onlyP = this.shadowRoot.querySelector('p');
+            onlyP.style.color = colorArr[Math.floor(Math.random() * colorArr.length)];
+            onlyP.innerHTML = Math.ceil(Math.random() * 6);
+        }
+
+        connectedCallback() {
+            this.shadowRoot.querySelector('button')
+                .addEventListener('click',
+                    () => this.toggleColor())
+        }
+    }
+    window.customElements.define('my-box', MyBox);
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .intro-box {
+            height: 600px;
+            width: 80%;
+            align-self: center;
+        }
+
+        .food-box-parent {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .food-box {
+            height: 400px;
+            width: 350px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <title>Intro</title>
+</head>
+
+<body>
+    <div class="intro-box">
+        <h1 id="name">Zhuocai Li</h1>
+        <h4>My name is Zhuocai Li, and you can just call me Tsai (rhymes with Hi!) During the short break between the
+            summer and fall semester, I created a web based on an online bootcamp and employed Express with Node.js,
+            MongoDB and some other developing tools to help me finish that. It was really a great experience, especially
+            when it was finally deployed and you got to see your achievement on the real world, which is truly amazing! 
+        </h4>
+        <h4>For now, I felt quite lucky to find a nice neighborhood to live where there is a gym only 200 meters sway
+            from my apartment. I really enjoyed working out, which is quite a good way to escape a moment from loads of
+            brain work :) Feel free to tell me it you enjoy working out as well, can find out some better moves
+            together!</h4>
+        <h4>I love: </h4>
+        <ul>
+            <li>pears</li>
+            <li>watermelon</li>
+            <li>mango</li>
+        </ul>
+    </div>
+
+    <div class="food-box-parent">
+        <div class="food-box">
+            <img src="https://m.media-amazon.com/images/I/71YPjsEyo7L._AC_SL1500_.jpg" alt="">
+            <h5>pears</h5>
+            <h6>Pears are fruits produced and consumed around the world, growing on a tree and harvested in the Northern
+                Hemisphere in late summer into October. </h6>
+        </div>
+        <div class="food-box">
+            <img src="https://www.gardeningknowhow.com/wp-content/uploads/2021/05/whole-and-slices-watermelon.jpg"
+                alt="">
+            <h5>watermelon</h5>
+            <h6>Watermelon (Citrullus lanatus) is a flowering plant species of the Cucurbitaceae family and the name of
+                its edible fruit. A scrambling and trailing vine-like plant, it was originally domesticated in Africa.
+            </h6>
+        </div>
+        <div class="food-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Hapus_Mango.jpg" alt="">
+            <h5>mango</h5>
+            <h6>A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to
+                have originated from the region between northwestern Myanmar, Bangladesh, and northeastern India.</h6>
+        </div>
+    </div>
+</body>
+
+</html>
