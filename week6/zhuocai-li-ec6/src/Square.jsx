@@ -16,7 +16,6 @@ export default function () {
                         <li><a href="#">Home Page</a></li>
                         <li><a href="#">Photos</a></li>
                         <li><a href="#">Secret Project</a></li>
-                        <li><a href="#abc">abc</a></li>
                     </ul>
                 </div>
             </div>
