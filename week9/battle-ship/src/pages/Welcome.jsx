@@ -11,7 +11,7 @@ export default function Welcome() {
 
     return (
         <React.Fragment>
-            <Panel className={click.className} active={click.active} />
+            <Panel />
             <div className="welcome-page-wrapper">
                 <div className="title">
                     Battle Ship
@@ -31,7 +31,10 @@ export default function Welcome() {
                                 <span class="tooltiptext">Get a free play with no one competing with you!</span>
                             </Link>
                         </span>
-                        <button className="btn btn-danger" onClick>go</button>
+                        <button className="btn btn-danger" onClick={() => dispatch({
+                            type: "click",
+                            active: "true"
+                        })}>Instructions</button>
                     </div>
                 </div>
             </div>

@@ -1,24 +1,25 @@
 import React from 'react'
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
-const Panel = props => {
+const Panel = () => {
+    const click = useSelector((state) => state.click)
 
     const dispatch = useDispatch()
 
-    const close = () => {
-
-    }
-
     return (
-        <div className={props.className}>
+        <div className={click.className}>
             <div className="over-layer">
             </div>
             <div className="panel">
                 <div className="head">
-                    <span className="close" active={props.active} onClick={() => dispatch({
+                    <span className="close" active={click.active} onClick={() => dispatch({
                         type: "click",
                         active: "false"
                     })}>x</span>
+                </div>
+                <div className="text-wrapper">
+                    <h2>Rules</h2>
+                    <p>lorem ipsum dolor sit amet</p>
                 </div>
             </div>
         </div>
