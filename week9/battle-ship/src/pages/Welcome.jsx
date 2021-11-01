@@ -1,29 +1,41 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import 'css/style.css'
+import Panel from 'components/Panel'
+import { useSelector, useDispatch } from 'react-redux';
 
 export default function Welcome() {
+    const click = useSelector((state) => state.click)
+
+    const dispatch = useDispatch()
 
     return (
-        <div className="welcome-page-wrapper">
+        <React.Fragment>
+            <Panel className={click.className} active={click.active} />
+            <div className="welcome-page-wrapper">
+                <div className="title">
+                    Battle Ship
+                </div>
+                <div className="box-with-info">
+                    <div className="difficulty-selecter-wrapper ">
+                        <span className="difficulty">
+                            <Link to="/playground" className="control" >
+                                <button type="button" className="btn btn-primary btn-difficulty" >Normal Game</button>
+                                <span class="tooltiptext">Start a normal game with a stupid stupid AI!</span>
+                            </Link>
 
-            <div className="box-with-info">
-                <div className="difficulty-selecter-wrapper ">
-                    <span className="difficulty">
-                        <Link to="/playground" className="control" >
-                            <button type="button" className="btn btn-primary btn-difficulty" >Normal Game</button>
-                            <span class="tooltiptext">Start a normal game with a stupid stupid AI!</span>
-                        </Link>
-
-                    </span>
-                    <span className="difficulty">
-                        <Link to="/playground" className="control" id="free-play">
-                            <button type="button" className="btn btn-primary btn-difficulty">Free Play</button>
-                            <span class="tooltiptext">Get a free play with no one competing with you!</span>
-                        </Link>
-                    </span>
+                        </span>
+                        <span className="difficulty">
+                            <Link to="/playground" className="control" id="free-play">
+                                <button type="button" className="btn btn-primary btn-difficulty">Free Play</button>
+                                <span class="tooltiptext">Get a free play with no one competing with you!</span>
+                            </Link>
+                        </span>
+                        <button className="btn btn-danger" onClick>go</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </React.Fragment>
+
     )
 }

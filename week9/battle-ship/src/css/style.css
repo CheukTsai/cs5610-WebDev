@@ -1,11 +1,17 @@
 /* -----welcome page----- */
 
 .welcome-page-wrapper {
+    position: absolute;
     display: flex;
     width: 100%;
     height: 100vh;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 100px;
 }
 
 .difficulty-selecter-wrapper{
@@ -58,4 +64,51 @@
   
 .control:hover .tooltiptext {
     visibility: visible;
+}
+
+/* -----Panel----- */
+.panel-wrapper {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.panel-wrapper .over-layer{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 50%;
+}
+
+.panel-wrapper .panel{
+    width: 50%;
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    right: 25%;
+    background: #fff;
+    box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease-in-out;
+    z-index: 99;
+    opacity: 90%;
+}
+.panel .head{
+    padding-right: 1rem;
+    text-align: right;
+    
+}
+
+.close{
+    color: black;
+    font-size: 2rem;
+}
+
+.panel-visible{
+    visibility: visible;
+}
+
+.panel-invisible{
+    visibility: hidden;
 }

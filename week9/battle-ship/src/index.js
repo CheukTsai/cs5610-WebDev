@@ -1,11 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { render } from 'react-dom';
+import Panel from "components/Panel"
 import Router from 'Router';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import reducers from './reducers/reducers'
+
+const store = createStore(reducers)
 
 ReactDOM.render(
-  <div>
+  <Provider store={store}>
     <Router />
-  </div>,
+  </Provider>,
   document.getElementById('root')
 );
 
