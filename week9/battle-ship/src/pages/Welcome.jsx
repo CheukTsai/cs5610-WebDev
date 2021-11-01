@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import 'css/style.css'
 import Panel from 'components/Panel'
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 export default function Welcome() {
-    const click = useSelector((state) => state.click)
 
     const dispatch = useDispatch()
 
@@ -32,7 +31,7 @@ export default function Welcome() {
                             </Link>
                         </span>
                         <button className="btn btn-danger" onClick={() => dispatch({
-                            type: "click",
+                            type: "panel-click",
                             active: "true"
                         })}>Instructions</button>
                     </div>

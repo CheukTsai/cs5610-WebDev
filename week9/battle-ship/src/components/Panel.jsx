@@ -13,7 +13,7 @@ const Panel = () => {
             <div className="panel">
                 <div className="head">
                     <span className="close" active={click.active} onClick={() => dispatch({
-                        type: "click",
+                        type: "panel-click",
                         active: "false"
                     })}>x</span>
                 </div>

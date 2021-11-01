@@ -121,3 +121,82 @@
     justify-content: center;
     text-align: center;
 }
+
+/* -----navbar----- */
+.nav-bar{
+    padding: 0;
+    position: sticky;
+    top:0;
+    height:50px;
+    width: 100%;
+    background: black;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-title{
+    width:60%;
+}
+
+.nav-bar-control{
+    display: flex;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar-btn{
+    display:flex;
+    height: 100%;
+    color:white;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-bar-btn{
+    height: 80%;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/* -----Board----- */
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+}
+
+/* -----Square----- */
+
+.square{ 
+    width: 50px;
+    height: 50px;
+    border: 2px solid gray;
+}
+
+.square:hover{
+    border: 6px solid red;
+}
+
+.black{ 
+    background-color: black;
+}
+
+.white{ 
+    background-color: white;
+}
+
+.red{ 
+    background-color: red;
+}
+
+/* -----PalyGround----- */
+.disabled{
+    visibility: hidden;
+}
+
+.active{
+    visibility: visible;
+}
